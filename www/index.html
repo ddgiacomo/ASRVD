@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+<link rel="apple-touch-startup-image" href="images/apple-touch-startup-image-320x460.png" />
+<title>Zemplar</title>
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+<link type="text/css" rel="stylesheet" href="colors/personal/personal.css"/>
+<link type="text/css" rel="stylesheet" href="css/idangerous.swiper.css"/>
+<link type="text/css" rel="stylesheet" href="css/swipebox.css"/>
+<link type="text/css" rel="stylesheet" href="css/photoswipe.css"/>
+<link type="text/css" rel="stylesheet" href="css/default-skin.css"/>
+ <script type="text/javascript" src="phonegap.js"></script>
+</head>
+<body>
+                                        <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center">Deslice hacia arriba o pellizque para salir.</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+  <div id="header" style="visibility: hidden">
+      <div class="gohome radius20"><a href="#"><img src="images/icons/home.png" onclick="limpiar()" alt="" title="" /></a></div>
+  </div>
+  <div class="swiper-container swiper-parent">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide sliderbg_menu">
+          <div class="swiper-container swiper-nested">
+                   <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                                  <div class="slide-inner">
+                                        <div class="logo"><a href="#" onclick="paseo()"><img src="colors/personal/images/logo.png" alt="" title="" border="0" /></a><br/><br/><br/></div>
+                                        <div class="menu">
+                                        <ul>
+                                       <li><a href="#" onclick="swiperParent.swipeTo(1);"><img src="images/icons/about.png" alt="" title="" /><span>Inicio</span></a></li>
+                                        <li><a href="#" onclick="swiperParent.swipeTo(2);"><img src="images/icons/clients.png" alt="" title="" /><span>Seguimiento</span></a></li>
+                                        </ul>
+                                        
+                                       
+                                        <div class="clearfix"></div>
+                                        <div style="text-align:center"><br/>   <br/>   
+                                       <p style="color: #FFF; font-size: 11pt"> Informacion Sucinta: </p><a href="#" onclick="sucinta('1')" ><b>Capsulas</b></a> / <a href="#" onclick="sucinta('2')"><b>Intravenoso</b></a>
+   <br/> <br/>                          
+<img src="images/newlogo2.png" width="25%" />
+<h2 style="color: #FFF; font-size: 12pt">Sociedad Venezolana de Nefrología</h2>
+</div>
+                                        </div> 
+                                 </div>
+                         </div>
+                   </div>
+                  <div class="swiper-scrollbar"></div>
+          </div> 
+      </div>
+      <div id="inicia"  class="swiper-slide sliderbg" style="visibility: hidden">
+      <div class="swiper-container swiper-nested1" >
+               <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                              <div class="slide-inner">
+                                        <div class="pages_container" >
+                                        <h2 class="page_title">Inicio</h2>
+                                        <h3>Parámetros</h3>
+                                            <div class="form">
+                                                 <form action="#">
+                                                 <fieldset class="ui-field-contain">
+                                                 <div class="toogle_wrap_blog radius8">
+                                                    <div class="trigger_blog"><a id="cal1" href="#">Calcular TFGe</a></div>
+                                                        <div class="toggle_container_blog">
+                                                        <label for="creat-n" style="color: white">Creatinina:</label>
+                                                <input id="creat-n" placeholder="Creatinina:"  type="tel" class="form_input radius4" /><span class="unidad">mg/dl</span><br/>
+                                                <label for="edad-n"  style="color: white">Edad:</label>
+                                                <input id="edad-n" placeholder="Edad:"  type="tel" class="form_input radius4" /><span class="unidad">años</span><br/>
+                                                <label for="sexo-n"  style="color: white">Sexo:</label>
+                                                <select id="sexo-n" class="form_select" >
+                                                <option  selected="selected" value="0" label="Sexo:"></option>
+                                                <option value="F" label="Femenino"></option>
+                                                <option value="M" label="Masculino"></option>
+                                                </select><br/>
+                                                <label for="raza-n"  style="color: white">Raza:</label>
+                                                <select id="raza-n" class="form_select" >
+                                                <option  selected="selected" value="0" label="Raza:"></option>
+                                                <option value="N" label="Negra"></option>
+                                                <option value="O" label="Otra"></option>
+                                                </select><br/>
+                                                <input type="button" onclick="tfge('1')" class="form_submit radius4 red red_borderbottom" value="Calcular" />
+                                                        </div>
+                                                </div>
+                                                 
+                                                 <label for="tfge-n">TFGe:</label>
+                                                <input id="tfge-n" placeholder="TFGe:"  type="tel" class="form_input radius4"  /><span class="unidad">ml/min/1.73m2</span><br/>
+                                                <label for="p-n">Fosforo Serico (P):</label>
+                                                <input id="p-n" placeholder="Fosforo Serico (P):"  type="tel"  class="form_input radius4"  /><span class="unidad">mg/dl</span><br/>
+                                                <label for="c-n">Calcio Sérico (C):</label>
+                                                <input id="c-n" placeholder="Calcio Sérico (C):"  type="tel" class="form_input radius4"   /><span class="unidad">mg/dl</span><br/>
+                                                <label for="pth-n">PTH:</label>
+                                                <input id="pth-n" placeholder="PTH:"  type="tel" class="form_input radius4"   /><span class="unidad">pg/ml</span><br/>
+                                                <h3>Valores normales del ensayo de PTH utilizado</h3>
+                                                <label for="pthmin-n">Mínimo:</label>
+                                                <input id="pthmin-n" placeholder="Mínimo:"  type="tel" class="form_input radius4"   /><span class="unidad">pg/ml</span><br/>
+                                                <label for="pthmax-n">Máximo:</label>
+                                                <input id="pthmax-n" placeholder="Máximo:" type="tel" class="form_input radius4"   /><span class="unidad">pg/ml</span><br/>
+                                                <label for="va-n">Vía de administración:</label>
+                                                <select id="va-n" class="form_select" >
+                                                <option  selected="selected" value="0" label="Vía de administración:"></option>
+                                                <option value="O" label="Oral"></option>
+                                                <option value="I" label="Intravenoso"></option>
+                                                </select>
+                                                <br/>
+                                                </fieldset>
+                                                <input  type="button" onclick="nuevo()" class="form_submit radius4 blue blue_borderbottom" value="Calcular" />
+                                                <input  type="button" onclick="limpiar()" class="form_submit radius4 blue blue_borderbottom" value="Limpiar" />
+                                                </form>
+                                    		</div>
+                                   
+                                        <h2>Resultados</h2>
+                                              <div class="portfolio_item radius8">
+                                             <div class="portfolio_image"><a><img src="images/portfolio_thumb21.png" alt="" title="" border="0" /></a></div>
+                                                 <div class="portfolio_details">
+                                                     <div id="resultado" class="result"> 
+                                                     
+                                                      <p>No se ha realizado ningun calculo.</p>
+                                                      </div>
+                                                <div id="algoritmo"> 
+                                                  <div id="algoritmo21" class="alg">
+													<a rel="gallery-2" href="images/algoritmos/21/Alg2.1.png" class="swipebox view_details" title="Algoritmo 2">Ver algoritmo</a>
+													</div>
+													<div id="algoritmo22" class="alg" >
+													<a rel="gallery-2" href="images/algoritmos/22/Alg2.2.png" class="swipebox view_details" title="Algoritmo 2">Ver algoritmo</a>
+													</div>
+													<div id="algoritmo23" class="alg">
+													<a rel="gallery-2" href="images/algoritmos/23/Alg2.3.png" class="swipebox view_details" title="Algoritmo 2">Ver algoritmo</a>
+													</div>
+													
+													<div id="algoritmo31" class="alg">
+													<a rel="gallery-2" href="images/algoritmos/31/Alg3.1.png" class="swipebox view_details" title="Algoritmo 3">Ver algoritmo</a>
+													</div>
+													<div id="algoritmo32" class="alg">
+													<a rel="gallery-2" href="images/algoritmos/32/Alg3.2.png" class="swipebox view_details" title="Algoritmo 3">Ver algoritmo</a>
+													</div>
+													<div id="algoritmo33" class="alg">
+													<a rel="gallery-2" href="images/algoritmos/33/Alg3.3.png" class="swipebox view_details" title="Algoritmo 3">Ver algoritmo</a>
+													</div>
+													
+													<div id="algoritmo42" class="alg">
+													<a rel="gallery-2" href="images/algoritmos/42/Alg4.2.png" class="swipebox view_details" title="Algoritmo 4">Ver algoritmo</a>
+													</div>
+													<div id="algoritmo43" class="alg">
+													<a rel="gallery-2" href="images/algoritmos/43/Alg4.3.png" class="swipebox view_details" title="Algoritmo 4">Ver algoritmo</a>
+													</div>
+													<div id="algoritmo41" class="alg">
+													<a rel="gallery-2" href="images/algoritmos/41/Alg4.1.png" class="swipebox view_details" title="Algoritmo 4">Ver algoritmo</a>
+													</div>
+												 </div>
+                                                 </div>
+                                        </div>       
+                                        <div class="clearfix"></div>
+      									<div class="scrolltop radius20"><a href="#" class="scrolltop1"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
+                                        </div>
+                                        <!--End of page container-->
+                              </div>
+                    </div>
+              </div>
+              <div class="swiper-scrollbar1"></div>
+     </div>
+     </div>
+      
+      <!--Page 2 content-->
+      <div  class="swiper-slide sliderbg" style="visibility: hidden">
+      <div class="swiper-container swiper-nested2" >
+               <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                            <div class="slide-inner" >
+                                        <div class="pages_container" id="iniciaa" >
+                                        <h2 class="page_title">Seguimiento</h2>
+                                        <h3>Parámetros</h3>
+                                            <div class="form">
+                                            	<form action="#">
+                                                <div class="toogle_wrap_blog radius8">
+                                                    <div class="trigger_blog"><a id="cal2" href="#">Calcular TFGe</a></div>
+                                                        <div class="toggle_container_blog">
+                                                        <label for="creat-t"  style="color: white">Creatinina:</label>
+                                                <input id="creat-t" placeholder="Creatinina:"  type="tel" class="form_input radius4" /><span class="unidad">mg/dl</span><br/>
+                                                <label for="edad-t"  style="color: white">Edad:</label>
+                                                <input id="edad-t" placeholder="Edad:"  type="tel" class="form_input radius4" /><span class="unidad">años</span><br/>
+                                                <label for="sexo-t"  style="color: white">Sexo:</label>
+                                                <select id="sexo-t" class="form_select" >
+                                                <option  selected="selected" value="0" label="Sexo:"></option>
+                                                <option value="F" label="Femenino"></option>
+                                                <option value="M" label="Masculino"></option>
+                                                </select><br/>
+                                                <label for="raza-t"  style="color: white">Raza:</label>
+                                                <select id="raza-t" class="form_select" >
+                                                <option  selected="selected" value="0"  label="Raza:"></option>
+                                                <option value="N" label="Negra"></option>
+                                                <option value="O" label="Otra"></option>
+                                                </select><br/>
+                                                <input type="button" onclick="tfge('2')" class="form_submit radius4 red red_borderbottom" value="Calcular" />
+                                                        </div>
+                                                </div>
+                                                        
+                                                <label for="tfge-t">TFGe:</label>
+                                                <input id="tfge-t" type="tel" placeholder="TFGe:"  class="form_input radius4"   /><span class="unidad">ml/min/1.73m2</span><br/>
+                                                <label for="p-t">Fosforo Sérico (P):</label>
+                                                <input id="p-t" type="tel" placeholder="Fosforo Sérico (P):"  class="form_input radius4"   /><span class="unidad">mg/dl</span><br/>
+                                                <label for="c-t">Calcio Sérico (C):</label>
+                                                <input id="c-t"  type="tel" placeholder="Calcio Sérico (C):"  class="form_input radius4"   /><span class="unidad">mg/dl</span><br/>
+                                                <label for="pthi-t">PTH Inicio del tratamiento:</label>
+                                                <input id="pthi-t" type="tel" placeholder="PTH Inicio del tratamiento:"  class="form_input radius4"   /><span class="unidad">pg/ml</span><br/>
+                                                <label for="ptha-t">PTH Actual:</label>
+                                                <input id="ptha-t" type="tel" placeholder="PTH Actual:"  class="form_input radius4"   /><span class="unidad">pg/ml</span><br/>
+                                                <h3>Valores normales del ensayo de PTH utilizado</h3>
+												<label for="pthmin-t">Mínimo:</label>
+                                                <input id="pthmin-t" type="tel" placeholder="Mínimo:"  class="form_input radius4"   /><span class="unidad">pg/ml</span><br/>
+                                                <label for="pthmax-t">Máximo:</label>
+                                                <input id="pthmax-t" type="tel" placeholder="Máximo:"  class="form_input radius4"   /><span class="unidad">pg/ml</span><br/>
+                                                <label for="asrvd-t">Dosis ASRVD:</label>
+                                                <input id="asrvd-t" type="tel" placeholder="Dosis ASRVD:"  class="form_input radius4"   /><span class="unidad">mcg</span><br/>
+                                                <label for="va-t">Vía de administración:</label>
+                                                <select id="va-t"  placeholder="Vía de administración:" class="form_select" >
+                                               <option  selected="selected" value="0" label="Vía de administración:"></option>
+                                                <option value="O" label="Oral"></option>
+                                                <option value="I" label="Intravenoso"></option>
+                                                </select>
+                                                <br/>
+                                                <input type="button" onclick="tratado()" class="form_submit radius4 red red_borderbottom" value="Calcular" />
+                                                <input  type="button" onclick="limpiar()" class="form_submit radius4 blue blue_borderbottom" value="Limpiar" />
+                                                </form>
+                                               
+                                    		</div>
+                                   
+                                        <h2>Resultados</h2>
+                                              <div class="portfolio_item radius8">
+                                             <div class="portfolio_image"><a><img src="images/portfolio_thumb21.png" alt="" title="" border="0" /></a></div>
+                                                 <div class="portfolio_details">
+                                                 
+                                                 <div id="resultado2" class="result"> 
+                                                     
+                                                      <p>No se ha realizado ningun calculo.</p>
+                                                      </div>
+														<div id="algoritmo2"> 
+															 
+															<div id="algoritmo24" class="alg">
+															<a rel="gallery-2" href="images/algoritmos/24/Alg2.4.png" class="swipebox view_details" title="Algoritmo 2">Ver algoritmo</a>
+															</div>
+															<div id="algoritmo27" class="alg">
+															<a rel="gallery-2" href="images/algoritmos/27/Alg2.7.png" class="swipebox view_details" title="Algoritmo 2">Ver algoritmo</a>
+															</div>
+															<div id="algoritmo26" class="alg">
+															<a rel="gallery-2" href="images/algoritmos/26/Alg2.6.png" class="swipebox view_details" title="Algoritmo 2">Ver algoritmo</a>
+															</div>
+															<div id="algoritmo25" class="alg">
+															<a rel="gallery-2" href="images/algoritmos/25/Alg2.5.png" class="swipebox view_details" title="Algoritmo 2">Ver algoritmo</a>
+															</div>
+															
+															<div id="algoritmo28" class="alg">
+															<a rel="gallery-2" href="images/algoritmos/28/Alg2.8.png" class="swipebox view_details" title="Algoritmo 2">Ver algoritmo</a>
+															</div>
+															<div id="algoritmo38" class="alg">
+															<a rel="gallery-2" href="images/algoritmos/38/Alg3.8.png" class="swipebox view_details" title="Algoritmo 3">Ver algoritmo</a>
+															</div>
+															<div id="algoritmo44" class="alg">
+															<a rel="gallery-2" href="images/algoritmos/44/Alg4.4.png" class="swipebox view_details" title="Algoritmo 4">Ver algoritmo</a>
+															</div>
+															<div id="algoritmo47" class="alg">
+															<a rel="gallery-2" href="images/algoritmos/47/Alg4.7.png" class="swipebox view_details" title="Algoritmo 4">Ver algoritmo</a>
+															</div>
+															<div id="algoritmo46" class="alg">
+															<a rel="gallery-2" href="images/algoritmos/46/Alg4.6.png" class="swipebox view_details" title="Algoritmo 4">Ver algoritmo</a>
+															</div>
+															<div id="algoritmo45" class="alg">
+															<a rel="gallery-2" href="images/algoritmos/45/Alg4.5.png" class="swipebox view_details" title="Algoritmo 4">Ver algoritmo</a>
+															</div>
+															<div id="algoritmo48" class="alg">
+															<a rel="gallery-2" href="images/algoritmos/48/Alg4.8.png" class="swipebox view_details" title="Algoritmo 4">Ver algoritmo</a>
+															</div>
+														</div>
+                                                 </div>
+                                        </div>       
+                                        <div class="clearfix"></div>
+      									<div class="scrolltop radius20" ><a href="#" class="scrolltop2"><img src="images/icons/top.png" alt="Go on top" title="Go on top" /></a></div>
+                                        </div>
+                              </div>
+                    </div>
+              </div>
+              <div class="swiper-scrollbar2"></div>
+     </div>
+     </div>
+    </div>
+    <div style="display:none" class="pagination"></div>
+  </div>
+<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.swipebox.js"></script>
+<script type="text/javascript" src="js/idangerous.swiper-2.1.min.js"></script>
+<script type="text/javascript" src="js/idangerous.swiper.scrollbar-2.1.js"></script>
+<script type="text/javascript" src="js/jquery.tabify.js"></script>
+<script type="text/javascript" src="js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="js/code.js"></script>
+<script type="text/javascript" src="js/load.js"></script>
+<script type="text/javascript" src="js/calculos.js"></script>
+<script type="text/javascript" src="js/spin.min.js"></script>
+<script src="js/photoswipe.min.js"></script> 
+<script src="js/photoswipe-ui-default.min.js"></script> 
+<script src="js/index.js"></script>
+<script type="text/javascript">
+            app.initialize();
+        </script>
+
+</body>
+</html>
